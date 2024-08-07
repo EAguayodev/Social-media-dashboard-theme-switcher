@@ -60,8 +60,18 @@ body.dark-theme {
     background-color: var(--Very-Dark-Blue-BG);
 }
 
-.overview-box.light-theme{
+body.dark-theme .toggle-container label{
+    background-color: var(--Dark-Theme-Toggle);
+}
+
+body.dark-theme .followers-box {
     background-color: var(--Dark-Desaturated-Blue-Card-BG);
+    color: var(--White-Text);
+}
+
+body.dark-theme .overview-box{
+    background-color: var(--Dark-Desaturated-Blue-Card-BG);
+    color: var(--White-Text);
 }
 
 .grid-container {
@@ -197,19 +207,13 @@ p:nth-child(2) {
     text-align: center;
 }
 
-.followers-box.dark-theme {
-    background-color: var(--Very-Dark-Blue-BG);
-    color: var(--White-Text);
-    position: relative;
-    width: 255px;
-    height: 216px;
-    padding: 20px;
+.followers-box.light-theme{
+    background-color: var(--Light-Grayish-Blue-Card-BG);
+    color: var(--Dark-Grayish-Blue-Text);
+}
 
-    border-radius: 5px;
-    overflow: hidden;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    margin: 20px;
-    text-align: center;
+.followers-box.dark-theme {
+    background-color: var(--Dark-Desaturated-Blue-Card-BG);
 }
 
 .followers-box:hover {
@@ -254,6 +258,10 @@ p:nth-child(2) {
 }
 
 /* overview style section start */
+
+.overview-box.dark{
+    background-color: var(--Dark-Theme-Toggle);
+}
 
 .overview-box {
     background: var(--Light-Grayish-Blue-Card-BG);
