@@ -50,6 +50,7 @@ body {
     transition: background-color 0.5s, color 0.5s;
 }
 
+/* light and dark toggle styles start */
 body.light-theme {
     background: var(--White-BG);
     color: var(--Dark-Grayish-Blue-Text);
@@ -60,19 +61,33 @@ body.dark-theme {
     background-color: var(--Very-Dark-Blue-BG);
 }
 
-body.dark-theme .toggle-container label{
-    background-color: var(--Dark-Theme-Toggle);
+.dark-theme label{
+    background: linear-gradient(to right, hsl(210, 78%, 56%) to hsl(146, 68%, 55%));
 }
 
-body.dark-theme .followers-box {
+.dark-theme .followers-box {
     background-color: var(--Dark-Desaturated-Blue-Card-BG);
     color: var(--White-Text);
 }
 
-body.dark-theme .overview-box{
+.dark-theme .followers-box:hover{
+    background-color: hsl(229, 28%, 27%);
+}
+
+.dark-theme .overview-container h2{
+    color: var(--White-Text);
+}
+
+.dark-theme .overview-box{
     background-color: var(--Dark-Desaturated-Blue-Card-BG);
     color: var(--White-Text);
 }
+
+.dark-theme .overview-box:hover {
+    background-color: hsl(229, 28%, 27%);
+}
+
+/* light and dark toggle styles end */
 
 .grid-container {
     max-width: 1440px;
@@ -132,8 +147,17 @@ body.dark-theme .overview-box{
     width: 60px;
 }
 
-.toggle-container label:hover {
-    background-image: linear-gradient(to right, hsl(210, 78%, 56%) to hsl(146, 68%, 55%));
+.toggle-container span {
+    color: var(--Desaturated-Blue-Text);
+    font-weight: 600;
+}
+
+label:hover{
+    background: linear-gradient(to right, hsl(210, 78%, 56%), hsl(146, 68%, 55%));
+}
+
+.dark-theme label{
+    background: linear-gradient(to right, hsl(210, 78%, 56%), hsl(146, 68%, 55%));
 }
 
 .toggle-container label .toggle-ball {
@@ -178,16 +202,27 @@ body.dark-theme .overview-box{
 
 .grid-followers-row h1 {
     font-size: 3rem;
+    margin-top: 0.6rem;
 }
-
-/* .followers-box,
-p:nth-child(2) {
-    font-size: 12px;
-    color: var(--Dark-Grayish-Blue-Text);
-} */
 
 .followers-box small {
     color: var(--Lime-Green);
+    position: relative;
+    top: 3rem;
+    font-weight: 600;
+}
+
+.followers-box p{
+    color: var(--Desaturated-Blue-Text);
+    font-weight: 600;
+}
+
+.followers-box p.followers-text{
+    letter-spacing: 5px;
+    font-weight: 500;
+    color: var(--Desaturated-Blue-Text);
+    font-size: 14px;
+    text-align: center;
 }
 
 .followers-youtube small {
@@ -202,7 +237,6 @@ p:nth-child(2) {
     background-color: var(--Light-Grayish-Blue-Card-BG);
     border-radius: 5px;
     overflow: hidden;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     margin: 20px;
     text-align: center;
 }
@@ -258,11 +292,6 @@ p:nth-child(2) {
 }
 
 /* overview style section start */
-
-.overview-box.dark{
-    background-color: var(--Dark-Theme-Toggle);
-}
-
 .overview-box {
     background: var(--Light-Grayish-Blue-Card-BG);
     width: 255px;
@@ -272,6 +301,11 @@ p:nth-child(2) {
     justify-content: space-around;
     margin: 1rem 0rem;
     padding: 1rem 0rem;
+}
+
+.overview-box p{
+    color: var(--Desaturated-Blue-Text);
+    font-weight: 600;
 }
 
 input {
@@ -331,29 +365,33 @@ input {
 
     .grid-row h2 {
         /* position: relative; */
-        left: 0;
+        right: 0;
+        left: -18px;
     }
 
     .grid-row p {
         /* position: relative; */
-        left: 0;
+        right: 0;
+        left: -18px;
     }
 
-    .grid-row h2,
+    /* .grid-row h2,
     p {
         text-align: center;
         left: 0;
-    }
+    } */
 
     .divider {
+        left: 0;
         display: block;
         position: relative;
-        top: 0.5rem;
+        top: 2rem;
     }
 
     .toggle-container {
         right: 0rem;
-        top: 2.5rem;
+        top: 2rem;
+        gap: 150px;
     }
 
     .grid-followers-row {
